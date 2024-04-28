@@ -1,0 +1,29 @@
+{
+  "name": "server",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev src/index.ts --remote",
+    "deploy": "wrangler deploy --minify src/index.ts",
+    "test": "vitest -w --globals",
+    "lint": "cls&&eslint ./src --report-unused-disable-directives --max-warnings 0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.42.7",
+    "hono": "^4.2.8"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240423.0",
+    "@types/bun": "latest",
+    "@types/eslint": "^8.56.10",
+    "@typescript-eslint/eslint-plugin": "^7.7.1",
+    "@typescript-eslint/parser": "^7.7.1",
+    "eslint": "^9.1.1",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.7.1",
+    "vitest": "^1.5.2",
+    "wrangler": "^3.52.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

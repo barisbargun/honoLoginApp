@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "skipLibCheck": true,
+    "strict": true,
+    "lib": ["ESNext"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx",
+    "types": [
+      "vitest/globals",
+      "@cloudflare/workers-types",
+      "@types/bun"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+  },
+  "exclude": ["node_modules"]
+}
