@@ -1,9 +1,7 @@
-import { svgPaths } from "@/constants";
 import {
   FormField,
   FormItem,
   FormLabel,
-  FormControl,
   FormMessage,
   CustomInput,
 } from "./ui";

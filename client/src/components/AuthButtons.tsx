@@ -1,4 +1,3 @@
-import { svgPaths } from "@/constants";
 import { CustomButton } from "./ui";
 
 type Props = {

@@ -1,6 +1,5 @@
-import { svgPaths } from "@/constants";
 import { useGetEmployees } from "@/lib/data";
-import { useContext, useEffect, useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import EmployeeTable from "./EmployeeTable";
 import { CustomButton } from "./ui";
 import { Loader } from ".";

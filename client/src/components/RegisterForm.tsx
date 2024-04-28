@@ -9,7 +9,7 @@ import { Loader, FormInput } from ".";
 import { PATH_LIST } from "@/constants/enum";
 
 const RegisterForm = () => {
-  const { mutateAsync, isPending, isSuccess } = _useMutation({
+  const { mutateAsync, isPending } = _useMutation({
     models: "NONE",
   });
   const toast = ToastMessage();
