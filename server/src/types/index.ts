@@ -12,4 +12,21 @@ type Bindings = {
   ACCESS_TOKEN_SECRET:string;
   CLIENT_URL:string;
   NODE_ENV?:string;
+  RATE_LIMITER: RateLimitBinding;
 };
+
+interface RateLimitBinding {
+	limit: LimitFunc;
+}
+
+interface LimitFunc {
+	(options: LimitOptions): Promise<RateLimitResult>;
+}
+
+interface RateLimitResult {
+	success: boolean;
+}
+
+interface LimitOptions {
+	key: string;
+}
