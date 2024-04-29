@@ -3,6 +3,9 @@ import { SupabaseClient } from "@supabase/supabase-js";
 import dbConnect from '@/config/dbConnect';
 import routes from './routes';
 import { corsOptions } from './config';
+import { rateLimiter } from './config/rateLimit';
+import { csrf } from 'hono/csrf'
+import csrfOptions from './config/csrfOptions';
 
 declare module "hono" {
   interface ContextVariableMap {
@@ -12,9 +15,12 @@ declare module "hono" {
 }
 const app = new Hono<{ Bindings: Bindings }>()
 
-app.use("*",corsOptions());
+app
+  .use("*", corsOptions())
+  .use(csrfOptions)
+  .use("*", rateLimiter)
+  .use(dbConnect)
+  .route("/", routes)
 
-app.use(dbConnect);
-app.route("/", routes)
 
 export default app;
