@@ -7,6 +7,7 @@ type Props = {
   methodType?: methods;
   id?: string
 }
+
 let queryKeys: string[][];
 let _methodType: methods;
 

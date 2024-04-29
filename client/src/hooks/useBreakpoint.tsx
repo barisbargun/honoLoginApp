@@ -15,13 +15,10 @@ const useBreakpoint = () => {
   };
 
   useEffect(() => {
-    // Check on initial render
     handleResize();
 
-    // Add event listener
     window.addEventListener('resize', handleResize);
 
-    // Remove event listener on cleanup
     return () => window.removeEventListener('resize', handleResize);
   }, []); 
 
