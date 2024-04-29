@@ -10,12 +10,12 @@ export const heroBackground: IHeroBackground = {
 
 export type SvgTypes = "news" | "auth" | "authFinish" | "indicator" | "input" | "panel";
 export const svgPaths:Record<SvgTypes, {path:string;glow?:string;}> = {
-  news: { path: "/svg/buttons/news.svg", glow: "glowButtonNews" },
-  auth: { path: "/svg/buttons/auth.svg", glow: "glowButtonAuth" },
-  authFinish: { path: "/svg/buttons/auth-finish.svg", glow: "glowButtonAuthFinish" },
-  indicator: { path: "/svg/indicator.svg", glow: "glowIndicator" },
-  input: { path: "/svg/input.png" },
-  panel: { path: "/svg/panel.svg" },
+  news: { path: "/components/buttons/news.svg", glow: "glowButtonNews" },
+  auth: { path: "/components/buttons/auth.svg", glow: "glowButtonAuth" },
+  authFinish: { path: "/components/buttons/auth-finish.svg", glow: "glowButtonAuthFinish" },
+  indicator: { path: "/components/indicator.svg", glow: "glowIndicator" },
+  input: { path: "/components/input.png" },
+  panel: { path: "/components/panel.svg" },
 }
 
 export const panelDescription = [
