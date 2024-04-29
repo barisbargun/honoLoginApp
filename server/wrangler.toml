@@ -2,7 +2,7 @@ name = "honologinappapi"
 compatibility_date = "2023-12-01"
 
 [vars]
-CLIENT_URL="http://localhost:5173"
+CLIENT_URL="https://baris-honologin-app.netlify.app"
 
 # [[kv_namespaces]]
 # binding = "MY_KV_NAMESPACE"
