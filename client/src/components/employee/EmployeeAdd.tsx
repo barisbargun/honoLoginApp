@@ -7,7 +7,6 @@ import {
   SheetTitle,
   SheetTrigger,
   CustomButton,
-  CustomPanel,
 } from "@/components/ui";
 import FormInput from "@/components/form/FormInput";
 import Loader from "@/components/Loader";
