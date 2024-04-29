@@ -1,4 +1,4 @@
-import { CustomButton } from "./ui";
+import { CustomButton } from "@/components/ui";
 
 type Props = {
   setIsLoginForm: React.Dispatch<React.SetStateAction<boolean>>;

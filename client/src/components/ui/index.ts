@@ -18,3 +18,4 @@ export * from "./sheet";
 
 export {default as CustomButton} from "./custom/CustomButton";
 export {default as CustomInput} from "./custom/CustomInput";
+export {default as CustomPanel} from "./custom/CustomPanel";

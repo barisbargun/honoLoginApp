@@ -1,4 +1,3 @@
-import { _useMutation } from "@/lib/actions";
 import {
   Form,
   Sheet,
@@ -8,15 +7,21 @@ import {
   SheetTitle,
   SheetTrigger,
   CustomButton,
-} from "./ui";
+  CustomPanel,
+} from "@/components/ui";
+import FormInput from "@/components/form/FormInput";
+import Loader from "@/components/Loader";
+
+import { _useMutation } from "@/lib/actions";
 import ToastMessage from "@/lib/ToastMessage";
-import { useForm } from "react-hook-form";
 import { employeeAddSchema } from "@/lib/validate";
+
+import { PATH_LIST } from "@/constants/enum";
+
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import FormInput from "./FormInput";
-import Loader from "./Loader";
-import { PATH_LIST } from "@/constants/enum";
+import { svgPaths } from "@/constants";
 
 const EmployeeAdd = () => {
   const { mutateAsync, isPending } = _useMutation({
@@ -45,9 +50,14 @@ const EmployeeAdd = () => {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <CustomButton svg="auth" className="max-w-[130px]">Add</CustomButton>
+        <CustomButton svg="auth" className="max-w-[130px]">
+          Add
+        </CustomButton>
       </SheetTrigger>
-      <SheetContent className="gradientPanel border-0 bg-transparent">
+      <SheetContent
+        className="gradientPanel border-0 bg-transparent"
+        style={{ backgroundImage: `url('${svgPaths.panel.path}')` }}
+      >
         <SheetHeader className="pt-4">
           <SheetTitle className="text-white">Add an employee</SheetTitle>
           <SheetDescription>

@@ -1,8 +1,10 @@
-import { useGetEmployees } from "@/lib/data";
 import { useEffect, useMemo } from "react";
+
+import { CustomButton, CustomPanel } from "@/components/ui";
+import { Loader } from "@/components";
+
+import { useGetEmployees } from "@/lib/data";
 import EmployeeTable from "./EmployeeTable";
-import { CustomButton } from "./ui";
-import { Loader } from ".";
 import { _useContext } from "@/context";
 
 const Employees = () => {
@@ -22,7 +24,7 @@ const Employees = () => {
     refetch();
   },[])
   return (
-    <div className="lg:flex-1 gradientPanel min-h-[450px] rounded-2xl max-lg:w-full px-5 py-3 text-white">
+    <CustomPanel className="lg:flex-1 min-h-[450px] rounded-2xl max-lg:w-full px-5 py-3 text-white">
       {!isPending && !isSuccess && (
         <CustomButton
         disabled={isPending || isSuccess}
@@ -40,7 +42,7 @@ const Employees = () => {
       ) : (
         <p className="mt-2">{(error as any)?.data?.message}</p>
       )}
-    </div>
+    </CustomPanel>
   );
 };
 

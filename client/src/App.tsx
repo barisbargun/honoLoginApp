@@ -1,11 +1,11 @@
 import {
-  AuthDescription,
-  AuthPanel,
-  Employees,
   HeroBackground,
   Navbar,
 } from "./components";
+import { AuthPanel, AuthDescription } from "./components/authPanel";
+import { Employees } from "./components/employee";
 import { Toaster } from "./components/ui";
+
 import { _useContext } from "./context";
 
 const App = () => {

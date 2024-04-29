@@ -1,14 +1,17 @@
-import FormInput from "./FormInput";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
+
+import { CustomButton, Form } from "@/components/ui";
+import { Loader } from "@/components";
+import FormInput from "./FormInput";
+
 import { loginSchema } from "@/lib/validate";
-import { CustomButton, Form } from "./ui";
 import ToastMessage from "@/lib/ToastMessage";
-import { Loader } from ".";
 import { _useMutation } from "@/lib/actions";
-import { _useContext } from "@/context";
 import { setAccessToken } from "@/lib/axios";
+
+import { _useContext } from "@/context";
 
 const LoginForm = () => {
   const { mutateAsync, isPending } = _useMutation({

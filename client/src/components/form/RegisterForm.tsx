@@ -1,11 +1,15 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
+
+import { CustomButton, Form } from "@/components/ui";
+import { Loader } from "@/components";
+import { FormInput } from ".";
+
 import { registerSchema } from "@/lib/validate";
-import { CustomButton, Form } from "./ui";
 import ToastMessage from "@/lib/ToastMessage";
 import { _useMutation } from "@/lib/actions";
-import { Loader, FormInput } from ".";
+
 import { PATH_LIST } from "@/constants/enum";
 
 const RegisterForm = () => {

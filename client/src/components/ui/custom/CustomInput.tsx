@@ -1,6 +1,8 @@
 import { svgPaths } from "@/constants";
 import React from "react";
-import { InputProps } from "../input";
+
+interface InputProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {}
 
 const CustomInput = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, ...props }, ref) => {

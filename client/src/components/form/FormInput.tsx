@@ -4,7 +4,7 @@ import {
   FormLabel,
   FormMessage,
   CustomInput,
-} from "./ui";
+} from "@/components/ui";
 import { UseFormReturn } from "react-hook-form";
 
 type Props = {
