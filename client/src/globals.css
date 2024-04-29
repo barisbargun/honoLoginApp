@@ -101,7 +101,7 @@
     @apply defaultButtonSize defaultSvg fonts-button flex-center transition-all duration-100 hover:scale-95 hover:brightness-90;
   }
   .gradientPanel {
-    @apply bg-[url('/svg/panel.svg')] bg-no-repeat shadow-2xl backdrop-blur-[30px];
+    @apply bg-no-repeat shadow-2xl backdrop-blur-[30px];
   }
 }
 
